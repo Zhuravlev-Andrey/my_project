@@ -9,6 +9,10 @@ schema: spec-driven
 #     Designs and tasks must cover Windows, macOS, and Linux
 #     Write all artifacts in Spanish
 
+context: |
+  Пиши артефакты OpenSpec и тексты интерфейса на русском.
+  Целевая платформа — Android-смартфоны (minSdk 24, targetSdk 37).
+
 # Per-artifact rules (optional)
 # Add custom rules for specific artifacts.
 # Example:

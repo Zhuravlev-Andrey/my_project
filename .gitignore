@@ -1,0 +1,21 @@
+# Gradle
+.gradle/
+build/
+
+# Android Studio / IntelliJ
+.idea/
+*.iml
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Локальная конфигурация (путь к SDK)
+local.properties
+
+# Ключи подписи
+*.jks
+*.keystore
+
+# ОС и логи
+.DS_Store
+*.log
