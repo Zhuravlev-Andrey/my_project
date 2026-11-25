@@ -34,7 +34,9 @@ Android-приложение на Kotlin и Jetpack Compose (стартовый 
 Память проекта — `memory-bank/`; поведение системы — в `openspec/specs/` (не дублировать).
 
 1. В начале каждой сессии читай по порядку: `memory-bank/activeContext.md` → `progress.md`
-   → `projectbrief.md`; остальные файлы — по необходимости задачи.
+   → `projectbrief.md` → `roadmap.md`; остальные файлы — по необходимости задачи.
+   Работай строго в рамках текущего этапа и его Exit-критерия; статусы обновляй только
+   в таблице `roadmap.md` и в `activeContext.md`.
 2. Перед созданием proposal/design/tasks сверяйся с `memory-bank/systemPatterns.md` и
    `memory-bank/techContext.md`.
 3. После завершения change (перед `openspec archive`) обнови `activeContext.md` и `progress.md`.

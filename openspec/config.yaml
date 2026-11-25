@@ -8,7 +8,8 @@ context: |
   Язык артефактов OpenSpec и текстов интерфейса: русский.
   Целевой продукт по черновику app/src/main/start.kts (не подключён к сборке) — офлайн-конструктор тренировок.
   Память проекта: перед работой над любым артефактом прочитай memory-bank/activeContext.md,
-  memory-bank/progress.md и memory-bank/projectbrief.md; остальные файлы — по необходимости.
+  memory-bank/progress.md, memory-bank/projectbrief.md и memory-bank/roadmap.md;
+  остальные файлы — по необходимости. Работай в рамках текущего этапа roadmap и его Exit-критерия.
   Поведение системы описано в openspec/specs/ — это источник правды, memory-bank его не дублирует.
   Работа в процессе — в openspec/changes/. Не добавляй в память секреты и персональные данные.
 
