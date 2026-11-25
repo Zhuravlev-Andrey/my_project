@@ -28,3 +28,16 @@ Android-приложение на Kotlin и Jetpack Compose (стартовый 
 - Артефакты OpenSpec и тексты интерфейса — на русском.
 - Изменения планировать через OpenSpec: `openspec propose`, затем `openspec apply`.
 - Не коммитить `local.properties`, `.gradle/` и `build/`.
+
+## Memory Bank
+
+Память проекта — `memory-bank/`; поведение системы — в `openspec/specs/` (не дублировать).
+
+1. В начале каждой сессии читай по порядку: `memory-bank/activeContext.md` → `progress.md`
+   → `projectbrief.md`; остальные файлы — по необходимости задачи.
+2. Перед созданием proposal/design/tasks сверяйся с `memory-bank/systemPatterns.md` и
+   `memory-bank/techContext.md`.
+3. После завершения change (перед `openspec archive`) обнови `activeContext.md` и `progress.md`.
+4. По команде «update memory bank» просмотри ВСЕ файлы `memory-bank/` и актуализируй их.
+5. При архитектурном решении добавь запись в `systemPatterns.md` (что решили, почему, дата).
+6. Не храни в memory-bank секреты, токены и персональные данные.

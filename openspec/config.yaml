@@ -1,36 +1,37 @@
 schema: spec-driven
 
-# Project context (optional)
-# Add only constraints that should guide OpenSpec artifacts and workflows.
-# Include constraints an agent cannot infer by reading the code.
-# Keep general project documentation and discoverable codebase facts out.
-# Example:
-#   context: |
-#     Designs and tasks must cover Windows, macOS, and Linux
-#     Write all artifacts in Spanish
-
 context: |
-  Пиши артефакты OpenSpec и тексты интерфейса на русском.
-  Целевая платформа — Android-смартфоны (minSdk 24, targetSdk 37).
+  Платформа: Android-смартфоны (minSdk 24, targetSdk 37).
+  Стек: Kotlin 2.2.10, Jetpack Compose (BOM 2026.02.01), Material 3, Gradle 9.6.0, AGP 9.5.1.
+  Модуль: один (:app), package com.example.myapplication.
+  Команды: build=./gradlew build, test=./gradlew test, lint=./gradlew lint, run=./gradlew installDebug.
+  Язык артефактов OpenSpec и текстов интерфейса: русский.
+  Целевой продукт по черновику app/src/main/start.kts (не подключён к сборке) — офлайн-конструктор тренировок.
+  Память проекта: перед работой над любым артефактом прочитай memory-bank/activeContext.md,
+  memory-bank/progress.md и memory-bank/projectbrief.md; остальные файлы — по необходимости.
+  Поведение системы описано в openspec/specs/ — это источник правды, memory-bank его не дублирует.
+  Работа в процессе — в openspec/changes/. Не добавляй в память секреты и персональные данные.
 
-# Per-artifact rules (optional)
-# Add custom rules for specific artifacts.
-# Example:
-#   rules:
-#     proposal:
-#       - Keep proposals under 500 words
-#       - Always state what is out of scope
-#     tasks:
-#       - Break tasks into chunks of max 2 hours
+rules:
+  proposal:
+    - Явно указывай, что out of scope
+    - Сверяйся с memory-bank/projectbrief.md; не выходи за границы проекта
+    - Не дублируй существующее поведение из openspec/specs/ — ссылайся на спеку
+  specs:
+    - Используй формат Given/When/Then
+    - Сначала ищи существующие паттерны в openspec/specs/, не изобретай новые
+    - Изменения поведения отражай в openspec/specs/, а не в memory-bank
+  design:
+    - Следуй memory-bank/systemPatterns.md; при отклонении объясни причину
+    - Для сложных потоков добавляй sequence-диаграммы
+    - Учитывай ограничения из memory-bank/techContext.md
+  tasks:
+    - Последней задачей всегда добавляй «Обновить memory-bank/activeContext.md и progress.md»
+    - Если change влияет на архитектуру — задача «Добавить решение в memory-bank/systemPatterns.md»
+    - Каждая задача должна быть проверяема командой или тестом
 
-# Per-operation guidance (optional)
-# Add advisory guidance for how apply and archive work should be conducted.
-# This is separate from artifact rules above.
-# Example:
-#   operations:
-#     apply:
-#       guidance:
-#         - Keep test summaries concise
-#     archive:
-#       guidance:
-#         - Summarize the archive outcome before finishing
+operations:
+  apply:
+    guidance:
+      - После выполнения задач обнови memory-bank/activeContext.md и progress.md
+      - Перед archive убедись, что activeContext.md отражает текущий срез, а не журнал
