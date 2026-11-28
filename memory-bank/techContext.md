@@ -24,6 +24,9 @@
 - `app/src/main/start.kts` — черновик Room-модели в пакете `com.example.workout.data`.
   Лежит вне `java/`, не компилируется; зависимостей Room в `app/build.gradle.kts` нет.
   Перед использованием перенести в `java/...` и добавить Room/KSP.
+- MVP-схема отличается от `start.kts`: без `MuscleGroup`/`ExerciseMuscle`, добавлена
+  `SessionExercise` (заметка и статус упражнения); экспорт/импорт входит в MVP.
+- Формат и механизм экспорта/импорта (файл/SAF, JSON) определить на этапе 2.
 - Release включает R8 (`optimization.enable = true`) с `packageScope` для androidx/kotlin/kotlinx.
 - Keep-правила — в `app/src/main/keepRules/*.keep`, не в `proguard-rules.pro`.
 - Нет CI, отдельного конфига линтера и продуктовых тестов; тесты в `app/src/test` и
